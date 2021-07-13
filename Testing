@@ -1,0 +1,16 @@
+Question - I'd like to learn more about your views on testing software:
+
+Why do we test our software as engineers
+- identify bugs/problems/errors/missing requirements early -> in turn saves money & time -> fixing costs less in early stages
+-security purposes -> data/details can be sensitive, people look for well tested, reliable software/products
+-ensure high quality of product e.g. ensuring it is compatiable with a range of devices/operating systems & ensures an effective customer expereince, meeting the requirements
+
+What best practices are there for testing software
+-end to end testing/ integration tests -> tests application from beginning to end, goes through every operation to ensure it behaves as expected
+-unit testing -> tests small units of code to ensure each component performs correct operations, makes it easy to identify source of bugs
+-positive & negative testing -> done to check whether the software meets the requirements through positive or negative scenarios e.g. for negative putting in the wrong number format or a decimal place
+
+
+Where you have applied those best practices
+-end to end testing -> calculator project e.g. Cypress
+-unit testing -> morse code translator project e.g Enzyme
