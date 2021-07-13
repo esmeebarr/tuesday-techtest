@@ -1,0 +1,44 @@
+// There are 3 components and above is their respective (cut down pseudo) SASS files. The WidgetContainer contains some SpecialisedWidget components, and are specialising the Widget component.
+// If you were reviewing this, what would you suggest?
+
+// Use BEM naming conventions (Block element modifier)
+// -> easier to read, understand & scale
+// Use scss nesting to write styles in nested hierarchy
+// -> saves development time as we dont have to retype same selectors
+
+What can be improved…
+/**** Widget ****/
+.widget {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black & label {
+    height: 20px;
+  }
+
+  /**** Specialised Widget ****/
+  &__special {
+    background: grey;
+    row: 1;
+    & > .content--red {
+      background: red;
+    }
+    &__disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    &::hover {
+      border-color: blue;
+    }
+  }
+  /**** Widget Container ****/
+  &__Container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 100px 100px 100px;
+    &__special-widget {
+      border: 1px solid black;
+    }
+  }
+}
+
