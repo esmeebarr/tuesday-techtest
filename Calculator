@@ -1,0 +1,54 @@
+const sum = require("./sum");
+
+it("should return zero when '' is entered", () => {
+  expect(sum("")).toBe("");
+});
+
+it("should return a number when entered on its own", () => {
+  expect(sum("1")).toBe("1");
+});
+
+it("should add 1,2 to equal 3", () => {
+  expect(sum(1, 2)).toBe(3);
+});
+
+it("should return an exception when '-' is entered", () => {
+  expect(sum("-")).toBe("exception");
+});
+
+it("should ignore numbers > 1000", () => {
+  expect(sum("1000")).toBe("");
+});
+
+it("should add numbers split by '/n'", () => {
+  expect(sum("2 /n 3")).toBe("5");
+});
+////////////////////////////////
+
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
+
+// Class calculator {
+ // constructor
+ 
+
+const calculator = () => {
+  calculator.sum = value;
+  this.number = value;
+  if (value === "") {
+    return 0;
+  } else if (value.length === 1) {
+    return parseInt(value);
+  } else if (this.value.includes("-")) {
+    throw new Error("exception");
+  } else if (value >= 1000) {
+    return 0;
+  } else if (this.value.includes("\n")) {
+    return value;
+  }
+};
+
+// \n = new line deliminated
+// write out separately
